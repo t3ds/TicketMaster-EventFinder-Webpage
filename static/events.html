@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Events</title>
+</head>
+<body>
+
+    <div class="eventform" id="eventform">
+
+        <div class = "formtitle" style="font-family: 'Times New Roman', Times, serif;">
+            Events Search
+        </div>
+        <br>
+        <form action="" id="esearch">
+
+            <label for="keyword">Keyword<span style="color: red">*</span></label><br>
+            <input type="text" name="keyword" id="keyword" required><br>
+            
+            
+            <table class = "searchBoxInput">
+                <tr>
+                    <td>
+                        <label for="dist">Distance(miles)</label><br>
+                        <input type="number" name="dist" id="dist" placeholder="10">
+                    </td>
+
+                    <td>
+                        <label for="category" id="categorylabel">Category<span style="color: red">*</span></label><br>
+                        <select name="category" id="category">
+                            <option value="default" selected>Default</option>
+                            <option value="music">Music</option>
+                            <option value="sports">Sports</option>
+                            <option value="arts">Arts</option>
+                            <!--<option value="theatre">Theatre</option>-->
+                            <option value="film">Film</option>
+                            <option value="miscellaneous">Miscellaneous</option>
+                        </select>
+
+                    </td>
+
+                </tr>
+            </table>
+            
+            <label for="location">Location<span style="color: red">*</span></label>&nbsp;&nbsp;
+            <input type="checkbox" name="autod" id="autod">
+            <div style="display: inline-block; font-size: 14px;" for="autod">Auto-Detect Location</div>
+            <input type="text" name="location" id="location" required><br>
+
+            <!--onclick="searchClick(this)"-->
+            <br>
+            <button style="background-color: #FE6C02; border-bottom: 3px solid #DA4D0D" type="submit"id = "searchbut" >SEARCH</button>
+            <button style="background-color: #4F6FAB; border-bottom: 3px solid #374a6d" type="button" onclick=clearAll()>CLEAR</button>
+
+        </form>
+
+    </div>
+
+    <div class="listings">
+        <table class= "events" id="events">
+
+        </table>
+
+    </div>
+
+    <div class="details" id="details">
+
+
+    </div>
+
+    <div id="venue">
+
+    </div>
+
+    <script src="static/script.js"></script>
+    
+</body>
+</html>
